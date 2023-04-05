@@ -18,17 +18,41 @@ public class Task {
 
             // Task 2. Check email of user
             String email = sc.nextLine();
-            char[] chars = email.toCharArray();
+            if (email.indexOf('@')== -1){
+                System.out.println("Your email is not correct");
+                return;
+            }
 
-            for (int i = 0; i < chars.length ; i++) {
-//                System.out.println(chars[i]);
-                if ('@' != chars[i]) {
-                    System.out.println("YDH@");
-                    return;
-                }
+//            String text = "Hello World";
+//            int w = text.indexOf('W');
+//            System.out.println();
 
 
+
+
+
+            //Task 3 Check that '@' is only one
+
+        String[] split = email.split("@");
+
+        if (split.length !=2 ) {
+            System.out.println("Your email is not correct. 2 '@'");
+            return;
         }
 
-    }
+        String partBeforeDog = split[0];
+        String partAfterDog = split[1];
+
+        if (partBeforeDog.startsWith(".") || partBeforeDog.endsWith(".")){
+            System.out.println("Your email is mot correct. Too many points");
+            return;
+        }
+        if (partAfterDog.startsWith(".") || partAfterDog.endsWith(".")){
+            System.out.println("Your email is mot correct");
+        } return;
+
+
+
+
+}
 }
