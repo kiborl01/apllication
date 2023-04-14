@@ -90,8 +90,8 @@ public class HW_5 {
             if (max < array6[i]) {
                 max = array6[i];
             }
-            System.out.print(max + " " + min);
         }
+        System.out.print(max + " " + min);
 
 
 
