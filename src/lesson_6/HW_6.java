@@ -6,18 +6,24 @@ import java.util.Scanner;
 public class HW_6 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String s = scanner.nextLine();
-        String st = s.toUpperCase();
-        System.out.println(st);
-
-        String s1 = scanner.nextLine();
-        int st1 = s1.length();
-        if (st1 % 2 == 0) {
-            System.out.println(s1 + " " + s1);
-        } else {
-            System.out.println(s1 + " " + s1 + " " + s1);
-
+        String[] str1 = new String[100];
+        String strin;
+        int a = 0;
+        do {
+            str1[a] = scanner.nextLine();
+            str1[a] = str1[a].toUpperCase();
+            strin = str1[a];
+            if (str1[a].length() % 2 == 1) {
+                str1[a] = str1[a].concat(strin);
+            }
+            str1[a] = str1[a].concat(strin);
+            a++;
+        } while (!Objects.equals(str1[a - 1], "") && a < 100);
+        for (int j = 0; j < a; j++) {
+            System.out.println(str1[j]);
         }
+
+
         System.out.println("----------------------------------------");
         System.out.println("Задача 2");
 
@@ -35,7 +41,6 @@ public class HW_6 {
         System.out.println(st2[min].length());
         System.out.println(st2[max]);
         System.out.println(st2[max].length());
-
 
 
         System.out.println("----------------------------------------");
@@ -74,25 +79,24 @@ public class HW_6 {
         for (int i = 0; i < st5.length; i++) {
             st5[i] = scanner.nextLine();
         }
-
-        for (int i = 1; i < st5.length; i++) {
-            String str5 = st5[i];
+        for (int i = 0; i < st5.length; i++) {
             for (int j = 0; j < st5.length; j++) {
-                if(i != j && str5 != null){
-                    if (str5.equals(st5[j])){
-                        st5[i] = null;
-                        st5[j] = null;
+                    if (i != j && st5[i] != null) {
+                        if (st5[i].equals(st5[j])) {
+                            st5[i] = null;
+                            st5[j] = null;
+                        }
+                    }
                 }
             }
+
+
+        for (String string : st5) {
+            System.out.println(string);
         }
     }
-
-        for (String str5: st5) {
-            System.out.println(str5);
-        }
-
-        }
 }
+
 
 
 
