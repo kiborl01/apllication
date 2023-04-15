@@ -3,9 +3,11 @@ package lesson_8.phone;
 public class PhoneBook {
     // fields
     Contact [] contacts = new Contact[100];
-    //costructor
+
+    // constructor
     public PhoneBook() {
     }
+
 
     // methods
     public Contact[] getContacts() {
@@ -18,11 +20,27 @@ public class PhoneBook {
 
     public void addContact(Contact contact) {
         for (int i = 0; i < contacts.length; i++) {
-            if (contacts[i] == null){
+            if (contacts[i] == null) {
                 contacts[i] = contact;
                 break;
             }
         }
+    }
+
+    public Contact searchContact(String nameOfContact) {
+
+        return null;
+    }
+
+    public void deleteContact(String nameOfContact) {
 
     }
+
+    public Contact editContact(String searchName, String newnameOfContact) {
+
+        return null;
+    }
+
+
+
 }

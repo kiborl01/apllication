@@ -1,20 +1,22 @@
 package lesson_8.phone;
 
 public class Contact {
-    //  поля
+    // fields
     String name;
     String phoneNumber;
     String email;
 
+    // constructor
     public Contact() {
     }
-    // конструктор
+
     public Contact(String name, String phoneNumber, String email) {
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.email = email;
     }
-    // метод
+
+    // methods
 
     public String getName() {
         return name;

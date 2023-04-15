@@ -2,17 +2,18 @@ package lesson_8.phone;
 
 public class main {
     public static void main(String[] args) {
-        Contact vasya = new Contact("Vasiliy", "89155129223", "test@mail.ru");
-        Contact Sanya = new Contact("Sanya", "89155129485", "test2@mail.ru");
-        Contact Dima = new Contact("Dima", "89155129263", "test3@mail.ru");
-        Contact Artem = new Contact("Artem", "89155129293", "test4@mail.ru");
-        Contact Kolya = new Contact("Kolya", "89155129103", "test5@mail.ru");
+        Contact vasya = new Contact("Vasiliy", "895146542312", "test1@mail.ru");
+        Contact petya = new Contact("Petr", "895146542312", "test2@mail.ru");
+        Contact olya = new Contact("Olga", "895146321312", "test3@mail.ru");
+        Contact vova = new Contact("Vladimir", "895146542369", "test4@mail.ru");
+        Contact alex = new Contact("Alexey", "895146554612", "test5@mail.ru");
 
         PhoneBook phoneBook = new PhoneBook();
+
         phoneBook.addContact(vasya);
-        phoneBook.addContact(Sanya);
-        phoneBook.addContact(Dima);
-        phoneBook.addContact(Artem);
-        phoneBook.addContact(Kolya);
+        phoneBook.addContact(petya);
+        phoneBook.addContact(olya);
+        phoneBook.addContact(vova);
+        phoneBook.addContact(alex);
     }
 }

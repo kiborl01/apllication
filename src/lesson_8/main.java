@@ -23,22 +23,13 @@ public class main {
      */
     public static void main(String[] args) {
         Cat snezhok = new Cat();
-        snezhok.sayHello("KIIIING KONG", 100);
-        snezhok.sayGoodbye();
-        int pyat = snezhok.giveMeFive();
-        System.out.println("Number pyat is " + pyat);
-        double pi =snezhok.giveMePiNumber();
-        System.out.println("Number pyat is " + pi);
-        int result = snezhok.multiple(31,59);
-        System.out.println("Result of multiple " + result);
-        Cat snezhok2 = new Cat("Snezhok Bro", 15,"Snezhokvich");
-        System.out.println("My name is " + snezhok2.getName());
-        snezhok2.setName("Snezhok Velikiy");
-        System.out.println("My name is " + snezhok2.getName());
-        snezhok.setName("Snezhok Obichniy");
-        System.out.println("U obichnogo snezhka name is " + snezhok.getName());
+        Kitten firstKitten = new Kitten("first");
+        Kitten secondKitten = new Kitten("second");
+        snezhok.addKitten(firstKitten);
+        snezhok.addKitten(secondKitten);
+
 
     }
-
-
 }
+
+
